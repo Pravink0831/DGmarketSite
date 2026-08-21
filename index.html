@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEUFORM — Structural Intelligence</title>
+    <meta
+      name="description"
+      content="A cinematic, futuristic landing experience built on Three.js topography and WebGL fluid dynamics."
+    />
+    <!--
+      NOTE: Tailwind, Three.js and fonts are now bundled locally by Vite.
+      No runtime CDN <script>/<link> tags — everything ships from /assets.
+      The single module entry below pulls in CSS + JS layers.
+    -->
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+  <body class="cosmic-bg">
+    <!-- LAYER 1: Three.js topographic grid -->
+    <canvas id="bg-canvas"></canvas>
+    <!-- LAYER 2: WebGL fluid simulation -->
+    <canvas id="fluid-canvas"></canvas>
+
+    <!-- Cinematic overlays -->
+    <div class="vignette"></div>
+    <div class="grain"></div>
+
+    <!-- ============ UI LAYER ============ -->
+    <div class="ui-layer">
+      <!-- Floating Navigation -->
+      <header class="fixed top-5 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-40">
+        <nav class="glass rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between rise">
+          <div class="flex items-center gap-2.5">
+            <div
+              class="relative w-8 h-8 rounded-lg grid place-items-center"
+              style="background: linear-gradient(135deg, #345793, #1c2b49); box-shadow: 0 0 18px rgba(52, 87, 147, 0.6)"
+            >
+              <span class="w-3 h-3 rounded-sm bg-white/90 rotate-45"></span>
+            </div>
+            <span class="font-display font-bold tracking-[0.2em] text-sm sm:text-base">NEUFORM</span>
+          </div>
+          <div class="hidden md:flex items-center gap-8 text-sm text-slate-300 font-medium">
+            <a href="#product" class="hover:text-white transition-colors">Product</a>
+            <a href="#features" class="hover:text-white transition-colors">Features</a>
+            <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+          </div>
+          <button
+            class="cta rounded-xl px-4 sm:px-5 py-2 text-sm font-semibold text-white flex items-center gap-2"
+          >
+            Get Started
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </button>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <main
+        id="product"
+        class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-28 pb-20"
+      >
+        <!-- status pill -->
+        <div
+          class="glass rounded-full px-4 py-1.5 flex items-center gap-2.5 text-xs font-mono text-slate-300 rise d1 mb-8"
+        >
+          <span class="w-2 h-2 rounded-full pulse-dot" style="background: #5f86d4"></span>
+          SYSTEM ONLINE · v2.6 STRUCTURAL ENGINE
+        </div>
+
+        <!-- Headline -->
+        <h1
+          class="rise d2 font-display font-black leading-[0.95] tracking-tight text-5xl sm:text-7xl lg:text-8xl max-w-5xl"
+        >
+          <span class="gradient-text block">DESIGN THE</span>
+          <span class="brand-glow-text block">FUTURE FABRIC</span>
+        </h1>
+
+        <p
+          class="rise d3 mt-8 max-w-2xl text-base sm:text-lg text-slate-300/90 font-light leading-relaxed"
+        >
+          A cinematic structural intelligence platform. Sculpt topographic data landscapes, render
+          fluid dynamics in real time, and ship immersive interfaces at the speed of thought.
+        </p>
+
+        <!-- CTA cluster -->
+        <div class="rise d4 mt-10 flex flex-col sm:flex-row items-center gap-4">
+          <button
+            class="cta rounded-xl px-7 py-3.5 text-sm font-semibold text-white flex items-center gap-2"
+          >
+            Launch Console
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </button>
+          <button
+            class="glass rounded-xl px-7 py-3.5 text-sm font-semibold text-slate-200 hover:text-white transition-colors flex items-center gap-2"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            Watch Reel
+          </button>
+        </div>
+
+        <!-- Floating feature cards -->
+        <div
+          id="features"
+          class="rise d5 mt-20 grid grid-cols-1 sm:grid-cols-3 gap-5 w-full max-w-5xl"
+        >
+          <div class="glass-card accent-frame rounded-2xl p-6 text-left floaty" style="animation-delay: 0s">
+            <div
+              class="w-10 h-10 rounded-lg grid place-items-center mb-4"
+              style="background: rgba(52, 87, 147, 0.22); border: 1px solid rgba(100, 116, 139, 0.35)"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fb0ea" stroke-width="1.8">
+                <path d="M3 15l4-6 4 4 5-8 5 10" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-white mb-1.5">Topographic Core</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              GPU-displaced wave meshes that ripple to every gesture in real time.
+            </p>
+          </div>
+          <div class="glass-card accent-frame rounded-2xl p-6 text-left floaty" style="animation-delay: 1.2s">
+            <div
+              class="w-10 h-10 rounded-lg grid place-items-center mb-4"
+              style="background: rgba(52, 87, 147, 0.22); border: 1px solid rgba(100, 116, 139, 0.35)"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fb0ea" stroke-width="1.8">
+                <path d="M12 3c3 4 6 6 6 10a6 6 0 11-12 0c0-4 3-6 6-10z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-white mb-1.5">Fluid Dynamics</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Navier-Stokes dye splats with velocity-reactive luminance and trails.
+            </p>
+          </div>
+          <div class="glass-card accent-frame rounded-2xl p-6 text-left floaty" style="animation-delay: 2.4s">
+            <div
+              class="w-10 h-10 rounded-lg grid place-items-center mb-4"
+              style="background: rgba(52, 87, 147, 0.22); border: 1px solid rgba(100, 116, 139, 0.35)"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fb0ea" stroke-width="1.8">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <path d="M9 9h6v6H9z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-white mb-1.5">Glass Architecture</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Composable glassmorphism layers with structural accent framing.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <!-- Trusted-by ticker -->
+      <section class="relative overflow-hidden py-10 border-y border-slate-2/20">
+        <div class="ticker-track text-slate-500 font-mono text-sm tracking-[0.25em]">
+          <span class="mx-10">HELIOS</span><span class="mx-10">·</span>
+          <span class="mx-10">VANTA CORE</span><span class="mx-10">·</span>
+          <span class="mx-10">NOVA GRID</span><span class="mx-10">·</span>
+          <span class="mx-10">AXIOM</span><span class="mx-10">·</span>
+          <span class="mx-10">QUANTUMLABS</span><span class="mx-10">·</span>
+          <span class="mx-10">STRATA</span><span class="mx-10">·</span>
+          <!-- duplicate for seamless loop -->
+          <span class="mx-10">HELIOS</span><span class="mx-10">·</span>
+          <span class="mx-10">VANTA CORE</span><span class="mx-10">·</span>
+          <span class="mx-10">NOVA GRID</span><span class="mx-10">·</span>
+          <span class="mx-10">AXIOM</span><span class="mx-10">·</span>
+          <span class="mx-10">QUANTUMLABS</span><span class="mx-10">·</span>
+          <span class="mx-10">STRATA</span><span class="mx-10">·</span>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="px-6 py-28 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="font-mono text-xs tracking-[0.3em] text-brand mb-4">// PRICING MATRIX</p>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl gradient-text">
+            Scale Without Friction
+          </h2>
+          <p class="text-slate-400 mt-4 max-w-xl mx-auto">
+            Structural pricing that grows with your systems. No hidden compute fees.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Tier -->
+          <div class="glass-card rounded-2xl p-8">
+            <p class="font-mono text-xs tracking-widest text-slate-400">STARTER</p>
+            <p class="mt-4 text-4xl font-bold">
+              $0<span class="text-base font-normal text-slate-500">/mo</span>
+            </p>
+            <div class="divider-glow my-6"></div>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li>✦ 1 topographic scene</li>
+              <li>✦ Community fluid presets</li>
+              <li>✦ 720p export</li>
+            </ul>
+            <button
+              class="glass w-full mt-8 rounded-xl py-3 text-sm font-semibold hover:text-white transition-colors"
+            >
+              Start Free
+            </button>
+          </div>
+
+          <!-- Featured -->
+          <div
+            class="glass-card accent-frame rounded-2xl p-8 relative scale-[1.03]"
+            style="background: linear-gradient(160deg, rgba(52, 87, 147, 0.22), rgba(15, 21, 38, 0.4))"
+          >
+            <span
+              class="absolute -top-3 left-1/2 -translate-x-1/2 cta text-[10px] font-bold tracking-widest rounded-full px-3 py-1"
+            >
+              MOST POPULAR
+            </span>
+            <p class="font-mono text-xs tracking-widest text-slate-300">STUDIO</p>
+            <p class="mt-4 text-4xl font-bold">
+              $49<span class="text-base font-normal text-slate-500">/mo</span>
+            </p>
+            <div class="divider-glow my-6"></div>
+            <ul class="space-y-3 text-sm text-slate-200">
+              <li>✦ Unlimited scenes</li>
+              <li>✦ Full fluid dynamics engine</li>
+              <li>✦ 4K cinematic export</li>
+              <li>✦ Priority GPU rendering</li>
+            </ul>
+            <button class="cta w-full mt-8 rounded-xl py-3 text-sm font-semibold text-white">
+              Go Studio
+            </button>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="glass-card rounded-2xl p-8">
+            <p class="font-mono text-xs tracking-widest text-slate-400">ENTERPRISE</p>
+            <p class="mt-4 text-4xl font-bold">Custom</p>
+            <div class="divider-glow my-6"></div>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li>✦ Dedicated render cluster</li>
+              <li>✦ SSO + audit logging</li>
+              <li>✦ On-prem deployment</li>
+              <li>✦ 24/7 SLA support</li>
+            </ul>
+            <button
+              class="glass w-full mt-8 rounded-xl py-3 text-sm font-semibold hover:text-white transition-colors"
+            >
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="px-6 py-14 border-t border-slate-2/20">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-2.5">
+            <div
+              class="w-7 h-7 rounded-lg grid place-items-center"
+              style="background: linear-gradient(135deg, #345793, #1c2b49)"
+            >
+              <span class="w-2.5 h-2.5 rounded-sm bg-white/90 rotate-45"></span>
+            </div>
+            <span class="font-display font-bold tracking-[0.2em] text-sm">NEUFORM</span>
+          </div>
+          <p class="text-slate-500 text-xs font-mono">
+            © 2026 NEUFORM SYSTEMS · ENGINEERED IN THE DARK
+          </p>
+          <div class="flex gap-6 text-slate-400 text-sm">
+            <a href="#" class="hover:text-white transition-colors">Docs</a>
+            <a href="#" class="hover:text-white transition-colors">GitHub</a>
+            <a href="#" class="hover:text-white transition-colors">Discord</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
