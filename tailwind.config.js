@@ -1,5 +1,5 @@
 /* =====================================================================
-   NEUFORM · Tailwind CSS theme configuration (build-time)
+   WEBARTISTA · Tailwind CSS theme configuration (build-time)
    ---------------------------------------------------------------------
    Compiled by PostCSS at build time (NOT the runtime Play CDN).
    The `content` globs enable tree-shaking so only classes actually used
@@ -13,6 +13,7 @@ export default {
     extend: {
       colors: {
         brand: '#345793',
+        teal1: '#22C3D6',
         slate1: '#64748B',
         slate2: '#475569',
       },

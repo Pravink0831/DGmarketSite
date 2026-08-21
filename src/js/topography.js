@@ -1,5 +1,5 @@
 /* =====================================================================
-   NEUFORM · LAYER 1 — THREE.JS TOPOGRAPHIC WAVE GRID
+   WEBARTISTA · LAYER 1 — THREE.JS TOPOGRAPHIC WAVE GRID
    ---------------------------------------------------------------------
    Vertex-displaced wireframe plane + floating particle field.
    Ripples continuously and reacts to the mouse pointer.

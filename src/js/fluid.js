@@ -1,5 +1,5 @@
 /* =====================================================================
-   NEUFORM · LAYER 2 — WEBGL FLUID SIMULATION (compact Navier-Stokes)
+   WEBARTISTA · LAYER 2 — WEBGL FLUID SIMULATION (compact Navier-Stokes)
    ---------------------------------------------------------------------
    Ping-pong FBOs: advection -> divergence -> pressure -> gradient subtract.
    Pointer motion injects velocity + brand-blue dye splats; click = burst.

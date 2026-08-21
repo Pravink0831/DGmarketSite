@@ -1,5 +1,5 @@
 /* =====================================================================
-   NEUFORM · Vite build configuration
+   WEBARTISTA · Vite build configuration
    ---------------------------------------------------------------------
    - `base: './'` produces relative asset paths so the site can be hosted
      from any sub-path (Azure Static Web Apps, App Service, SharePoint,

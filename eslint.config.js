@@ -1,5 +1,5 @@
 /* =====================================================================
-   NEUFORM · ESLint flat config (ESLint v9+)
+   WEBARTISTA · ESLint flat config (ESLint v9+)
    Baseline rules for browser ES modules. Extend as the project grows.
    ===================================================================== */
 export default [

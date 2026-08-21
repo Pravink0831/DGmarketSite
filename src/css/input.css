@@ -1,8 +1,8 @@
 /* =====================================================================
-   NEUFORM · Application stylesheet (Tailwind entry)
+   WEBARTISTA · Application stylesheet (Tailwind entry)
    ---------------------------------------------------------------------
    Tailwind's base/components/utilities are injected here at build time.
-   All custom NEUFORM styles follow below the directives.
+   All custom WEBARTISTA styles follow below the directives.
    ===================================================================== */
 @tailwind base;
 @tailwind components;
@@ -13,6 +13,7 @@
 --------------------------------------------------------------------- */
 :root {
   --brand: #345793;
+  --teal: #22c3d6;
   --slate1: #64748b;
   --slate2: #475569;
 }
@@ -29,6 +30,13 @@ body {
   color: #ffffff;
   overflow-x: hidden;
   font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Brand logo lockup (inline SVG in nav + footer) */
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 100%;
 }
 
 /* Cosmic slate -> ultra-dark navy depth */

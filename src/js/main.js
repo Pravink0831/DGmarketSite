@@ -1,5 +1,5 @@
 /* =====================================================================
-   NEUFORM · Application entry point
+   WEBARTISTA · Application entry point
    ---------------------------------------------------------------------
    Vite resolves and bundles everything imported here:
      1. Self-hosted fonts (CSS)

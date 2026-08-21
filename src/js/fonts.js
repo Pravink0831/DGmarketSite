@@ -1,5 +1,5 @@
 /* =====================================================================
-   NEUFORM · Self-hosted fonts (via @fontsource)
+   WEBARTISTA · Self-hosted fonts (via @fontsource)
    ---------------------------------------------------------------------
    Replaces the Google Fonts runtime CDN <link>. Fonts are bundled with
    the app, so they load with no external request — faster, GDPR-safe,

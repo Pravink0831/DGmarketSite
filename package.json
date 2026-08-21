@@ -1,8 +1,8 @@
 {
-  "name": "neuform",
+  "name": "webartista",
   "private": true,
   "version": "1.0.0",
-  "description": "NEUFORM — cinematic structural-intelligence landing page (Three.js topography + WebGL fluid dynamics).",
+  "description": "WEBARTISTA — cinematic landing page (Three.js topography + WebGL fluid dynamics).",
   "type": "module",
   "scripts": {
     "dev": "vite",

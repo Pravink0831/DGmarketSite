@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NEUFORM — Structural Intelligence</title>
+    <title>WEBARTISTA — Web Design Studio</title>
     <meta
       name="description"
-      content="A cinematic, futuristic landing experience built on Three.js topography and WebGL fluid dynamics."
+      content="WEBARTISTA — a cinematic web design studio experience built on Three.js topography and WebGL fluid dynamics."
     />
     <!--
-      NOTE: Tailwind, Three.js and fonts are now bundled locally by Vite.
+      NOTE: Tailwind, Three.js and fonts are bundled locally by Vite.
       No runtime CDN <script>/<link> tags — everything ships from /assets.
       The single module entry below pulls in CSS + JS layers.
     -->
@@ -30,15 +30,37 @@
       <!-- Floating Navigation -->
       <header class="fixed top-5 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-40">
         <nav class="glass rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between rise">
-          <div class="flex items-center gap-2.5">
-            <div
-              class="relative w-8 h-8 rounded-lg grid place-items-center"
-              style="background: linear-gradient(135deg, #345793, #1c2b49); box-shadow: 0 0 18px rgba(52, 87, 147, 0.6)"
+          <!-- Brand logo (WEBARTISTA) — embedded inline SVG -->
+          <a href="#product" aria-label="WEBARTISTA home" class="flex items-center h-7">
+            <svg
+              class="brand-logo"
+              viewBox="0 0 216 34"
+              role="img"
+              aria-label="WEBARTISTA"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span class="w-3 h-3 rounded-sm bg-white/90 rotate-45"></span>
-            </div>
-            <span class="font-display font-bold tracking-[0.2em] text-sm sm:text-base">NEUFORM</span>
-          </div>
+              <text
+                x="0"
+                y="26"
+                font-family="'Space Grotesk','Segoe UI',Arial,sans-serif"
+                font-weight="700"
+                font-size="26"
+                letter-spacing="0.5"
+              >
+                <tspan fill="#22C3D6">WEB</tspan><tspan fill="#FFFFFF">ARTISTA</tspan>
+              </text>
+              <g
+                stroke="#22C3D6"
+                stroke-width="4.2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M187 8 L195 17 L187 26" />
+                <path d="M197 8 L205 17 L197 26" />
+              </g>
+            </svg>
+          </a>
           <div class="hidden md:flex items-center gap-8 text-sm text-slate-300 font-medium">
             <a href="#product" class="hover:text-white transition-colors">Product</a>
             <a href="#features" class="hover:text-white transition-colors">Features</a>
@@ -272,17 +294,39 @@
       <!-- Footer -->
       <footer class="px-6 py-14 border-t border-slate-2/20">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div class="flex items-center gap-2.5">
-            <div
-              class="w-7 h-7 rounded-lg grid place-items-center"
-              style="background: linear-gradient(135deg, #345793, #1c2b49)"
+          <!-- Brand logo (WEBARTISTA) — embedded inline SVG -->
+          <a href="#product" aria-label="WEBARTISTA home" class="flex items-center h-6">
+            <svg
+              class="brand-logo"
+              viewBox="0 0 216 34"
+              role="img"
+              aria-label="WEBARTISTA"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span class="w-2.5 h-2.5 rounded-sm bg-white/90 rotate-45"></span>
-            </div>
-            <span class="font-display font-bold tracking-[0.2em] text-sm">NEUFORM</span>
-          </div>
+              <text
+                x="0"
+                y="26"
+                font-family="'Space Grotesk','Segoe UI',Arial,sans-serif"
+                font-weight="700"
+                font-size="26"
+                letter-spacing="0.5"
+              >
+                <tspan fill="#22C3D6">WEB</tspan><tspan fill="#FFFFFF">ARTISTA</tspan>
+              </text>
+              <g
+                stroke="#22C3D6"
+                stroke-width="4.2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M187 8 L195 17 L187 26" />
+                <path d="M197 8 L205 17 L197 26" />
+              </g>
+            </svg>
+          </a>
           <p class="text-slate-500 text-xs font-mono">
-            © 2026 NEUFORM SYSTEMS · ENGINEERED IN THE DARK
+            © 2026 WEBARTISTA · ENGINEERED IN THE DARK
           </p>
           <div class="flex gap-6 text-slate-400 text-sm">
             <a href="#" class="hover:text-white transition-colors">Docs</a>
