@@ -19,8 +19,10 @@
 
 ## 2. 🔒 LOCKED FILE & FOLDER STRUCTURE — DO NOT CHANGE
 
-The structure below is **frozen**. Never add, rename, move, delete, or restructure files.
-Only **update the contents** of existing files, the **logo**, and the **section markup**.
+The structure below is **frozen**. Never rename, move, delete, or restructure files.
+Motion and animation modules may be added or updated under `src/js/` when needed for a
+requested section or interaction. Animation styles may be added or updated in
+`src/css/input.css`.
 
 ```
 ├── index.html
@@ -39,6 +41,7 @@ Only **update the contents** of existing files, the **logo**, and the **section 
     │   └── input.css
     └── js/
         ├── main.js
+        ├── motion.js
         ├── fonts.js
         ├── topography.js
         ├── fluid.js
@@ -46,13 +49,15 @@ Only **update the contents** of existing files, the **logo**, and the **section 
 ```
 
 **Rules:**
-- ❌ Do **not** create new files or new folders.
+- ✅ You **may** add or update motion and animation files under `src/js/` when required by the requested work.
+- ❌ Do **not** create unrelated files or new folders.
 - ❌ Do **not** rename or move any file.
 - ❌ Do **not** add CDN `<script>`/`<link>` tags to `index.html` — it stays a single module entry.
 - ❌ Do **not** change build config: `vite.config.js`, `tailwind.config.js`, `postcss.config.js`,
   `eslint.config.js`, `.prettierrc.json`, `.nvmrc`.
 - ✅ You **may** edit: `index.html` (section markup, nav, footer), `src/css/input.css`,
-  and the section-level contents inside `src/js/main.js`.
+  motion and animation modules under `src/js/`, and the section-level contents inside
+  `src/js/main.js`.
 
 ---
 
@@ -66,8 +71,12 @@ unless I explicitly ask you to modify that specific file by name.
 - `src/js/slider.js` — hero slider engine (arrow navigation + glass motion transition).
 - `src/js/fonts.js` — font loading logic.
 
+Motion and animation modules such as `src/js/motion.js` are explicitly editable. Their
+logic may be updated or extended to support section reveals, transitions, staggered
+entrances, scroll interactions, and other requested motion behavior.
+
 **Rules:**
-- Never refactor, "optimize," rewrite, or reformat these files as a side effect of another task.
+- Never refactor, "optimize," rewrite, or reformat the protected engine files as a side effect of another task.
 - Never change their public function signatures, exports, init order, or config constants.
 - If a task *seems* to require an engine change, **stop and ask me first** — describe the change
   and wait for approval before editing.

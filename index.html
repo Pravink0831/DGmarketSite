@@ -3,16 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WEBARTISTA — Web Design Studio</title>
+    <title>WEBARTISTA — Structural Intelligence</title>
     <meta
       name="description"
-      content="WEBARTISTA — a cinematic web design studio experience built on Three.js topography and WebGL fluid dynamics."
+      content="A cinematic, futuristic landing experience built on Three.js topography and WebGL fluid dynamics."
     />
-    <!--
-      NOTE: Tailwind, Three.js and fonts are bundled locally by Vite.
-      No runtime CDN <script>/<link> tags — everything ships from /assets.
-      The single module entry below pulls in CSS + JS layers.
-    -->
+    <!-- Tailwind, Three.js and fonts are bundled locally by Vite (no CDN). -->
     <script type="module" src="/src/js/main.js"></script>
   </head>
   <body class="cosmic-bg">
@@ -30,263 +26,230 @@
       <!-- Floating Navigation -->
       <header class="fixed top-5 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-40">
         <nav class="glass rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between rise">
-          <!-- Brand logo (WEBARTISTA) — embedded inline SVG -->
           <a href="#product" aria-label="WEBARTISTA home" class="flex items-center h-7">
-            <svg
-              class="brand-logo"
-              viewBox="0 0 216 34"
-              role="img"
-              aria-label="WEBARTISTA"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <text
-                x="0"
-                y="26"
-                font-family="'Space Grotesk','Segoe UI',Arial,sans-serif"
-                font-weight="700"
-                font-size="26"
-                letter-spacing="0.5"
-              >
-                <tspan fill="#22C3D6">WEB</tspan><tspan fill="#FFFFFF">ARTISTA</tspan>
-              </text>
-              <g
-                stroke="#22C3D6"
-                stroke-width="4.2"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M187 8 L195 17 L187 26" />
-                <path d="M197 8 L205 17 L197 26" />
-              </g>
-            </svg>
+            <img src="/src/assets/logo.svg" alt="WEBARTISTA" class="brand-logo" />
           </a>
           <div class="hidden md:flex items-center gap-8 text-sm text-slate-300 font-medium">
-            <a href="#product" class="hover:text-white transition-colors">Product</a>
-            <a href="#features" class="hover:text-white transition-colors">Features</a>
+            <a href="#about" class="hover:text-white transition-colors">Why Us</a>
+            <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
             <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
           </div>
-          <button
+          <a
+            href="#contact"
             class="cta rounded-xl px-4 sm:px-5 py-2 text-sm font-semibold text-white flex items-center gap-2"
           >
-            Get Started
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
-          </button>
+            Let's Talk
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
         </nav>
       </header>
 
-      <!-- Hero Section -->
-      <main
-        id="product"
-        class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-28 pb-20"
-      >
-        <!-- status pill -->
-        <div
-          class="glass rounded-full px-4 py-1.5 flex items-center gap-2.5 text-xs font-mono text-slate-300 rise d1 mb-8"
-        >
-          <span class="w-2 h-2 rounded-full pulse-dot" style="background: #5f86d4"></span>
-          SYSTEM ONLINE · v2.6 STRUCTURAL ENGINE
+      <!-- ============ HERO SLIDER (4 rotating headlines · glass motion) ============ -->
+      <section class="hero" data-hero aria-roledescription="carousel" aria-label="WEBARTISTA hero">
+        <!-- Glass-sweep overlay (animated on slide change) -->
+        <div class="hero-glass" data-glass aria-hidden="true"></div>
+
+        <!-- Prev / Next arrows -->
+        <button class="hero-arrow prev" data-arrow="prev" aria-label="Previous slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
+        </button>
+        <button class="hero-arrow next" data-arrow="next" aria-label="Next slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 18l6-6-6-6" /></svg>
+        </button>
+
+        <!-- Slide 1 — Web Design Studio -->
+        <div class="hero-slide" data-slide role="group" aria-roledescription="slide" aria-label="1 of 4">
+          <div class="glass rounded-full px-4 py-1.5 inline-flex items-center gap-2.5 text-xs font-mono mb-8">
+            <span class="w-2 h-2 rounded-full pulse-dot" style="background: #5f86d4"></span>
+            <span class="brand-glow tracking-[0.25em] font-semibold">WEB DESIGN STUDIO</span>
+          </div>
+          <h1 class="hero-headline">
+            <span class="gradient-text">Web </span><span class="outline-word">Design</span><span class="gradient-text"> Studio</span>
+          </h1>
+          <div class="hero-sublabel">Get In Touch</div>
         </div>
 
-        <!-- Headline -->
-        <h1
-          class="rise d2 font-display font-black leading-[0.95] tracking-tight text-5xl sm:text-7xl lg:text-8xl max-w-5xl"
-        >
-          <span class="gradient-text block">DESIGN THE</span>
-          <span class="brand-glow-text block">FUTURE FABRIC</span>
-        </h1>
-
-        <p
-          class="rise d3 mt-8 max-w-2xl text-base sm:text-lg text-slate-300/90 font-light leading-relaxed"
-        >
-          A cinematic structural intelligence platform. Sculpt topographic data landscapes, render
-          fluid dynamics in real time, and ship immersive interfaces at the speed of thought.
-        </p>
-
-        <!-- CTA cluster -->
-        <div class="rise d4 mt-10 flex flex-col sm:flex-row items-center gap-4">
-          <button
-            class="cta rounded-xl px-7 py-3.5 text-sm font-semibold text-white flex items-center gap-2"
-          >
-            Launch Console
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
-          </button>
-          <button
-            class="glass rounded-xl px-7 py-3.5 text-sm font-semibold text-slate-200 hover:text-white transition-colors flex items-center gap-2"
-          >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-            Watch Reel
-          </button>
+        <!-- Slide 2 — Precision Performance Progress -->
+        <div class="hero-slide" data-slide role="group" aria-roledescription="slide" aria-label="2 of 4">
+          <div class="glass rounded-full px-4 py-1.5 inline-flex items-center gap-2.5 text-xs font-mono mb-8">
+            <span class="w-2 h-2 rounded-full pulse-dot" style="background: #5f86d4"></span>
+            <span class="brand-glow tracking-[0.25em] font-semibold">OUR APPROACH</span>
+          </div>
+          <h1 class="hero-headline">
+            <span class="gradient-text">Precision </span><span class="outline-word">Performance</span><span class="gradient-text"> Progress</span>
+          </h1>
+          <div class="hero-sublabel">About Us</div>
         </div>
 
-        <!-- Floating feature cards -->
-        <div
-          id="features"
-          class="rise d5 mt-20 grid grid-cols-1 sm:grid-cols-3 gap-5 w-full max-w-5xl"
-        >
-          <div class="glass-card accent-frame rounded-2xl p-6 text-left floaty" style="animation-delay: 0s">
-            <div
-              class="w-10 h-10 rounded-lg grid place-items-center mb-4"
-              style="background: rgba(52, 87, 147, 0.22); border: 1px solid rgba(100, 116, 139, 0.35)"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fb0ea" stroke-width="1.8">
-                <path d="M3 15l4-6 4 4 5-8 5 10" />
-              </svg>
-            </div>
-            <h3 class="font-semibold text-white mb-1.5">Topographic Core</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              GPU-displaced wave meshes that ripple to every gesture in real time.
-            </p>
+        <!-- Slide 3 — What We Do -->
+        <div class="hero-slide" data-slide role="group" aria-roledescription="slide" aria-label="3 of 4">
+          <div class="glass rounded-full px-4 py-1.5 inline-flex items-center gap-2.5 text-xs font-mono mb-8">
+            <span class="w-2 h-2 rounded-full pulse-dot" style="background: #5f86d4"></span>
+            <span class="brand-glow tracking-[0.25em] font-semibold">CAPABILITIES</span>
           </div>
-          <div class="glass-card accent-frame rounded-2xl p-6 text-left floaty" style="animation-delay: 1.2s">
-            <div
-              class="w-10 h-10 rounded-lg grid place-items-center mb-4"
-              style="background: rgba(52, 87, 147, 0.22); border: 1px solid rgba(100, 116, 139, 0.35)"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fb0ea" stroke-width="1.8">
-                <path d="M12 3c3 4 6 6 6 10a6 6 0 11-12 0c0-4 3-6 6-10z" />
-              </svg>
-            </div>
-            <h3 class="font-semibold text-white mb-1.5">Fluid Dynamics</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Navier-Stokes dye splats with velocity-reactive luminance and trails.
-            </p>
-          </div>
-          <div class="glass-card accent-frame rounded-2xl p-6 text-left floaty" style="animation-delay: 2.4s">
-            <div
-              class="w-10 h-10 rounded-lg grid place-items-center mb-4"
-              style="background: rgba(52, 87, 147, 0.22); border: 1px solid rgba(100, 116, 139, 0.35)"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fb0ea" stroke-width="1.8">
-                <rect x="4" y="4" width="16" height="16" rx="2" />
-                <path d="M9 9h6v6H9z" />
-              </svg>
-            </div>
-            <h3 class="font-semibold text-white mb-1.5">Glass Architecture</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Composable glassmorphism layers with structural accent framing.
-            </p>
-          </div>
+          <h1 class="hero-headline">
+            <span class="gradient-text">What </span><span class="outline-word">We</span><span class="gradient-text"> Do</span>
+          </h1>
+          <div class="hero-sublabel">Our Expertise</div>
         </div>
-      </main>
 
-      <!-- Trusted-by ticker -->
-      <section class="relative overflow-hidden py-10 border-y border-slate-2/20">
+        <!-- Slide 4 — Explore Our Work -->
+        <div class="hero-slide" data-slide role="group" aria-roledescription="slide" aria-label="4 of 4">
+          <div class="glass rounded-full px-4 py-1.5 inline-flex items-center gap-2.5 text-xs font-mono mb-8">
+            <span class="w-2 h-2 rounded-full pulse-dot" style="background: #5f86d4"></span>
+            <span class="brand-glow tracking-[0.25em] font-semibold">PORTFOLIO</span>
+          </div>
+          <h1 class="hero-headline">
+            <span class="gradient-text">Explore </span><span class="outline-word">Our</span><span class="gradient-text"> Work</span>
+          </h1>
+          <div class="hero-sublabel">Discover Work</div>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="hero-dots" role="tablist" aria-label="Slide selectors">
+          <button class="hero-dot" data-dot aria-label="Go to slide 1"></button>
+          <button class="hero-dot" data-dot aria-label="Go to slide 2"></button>
+          <button class="hero-dot" data-dot aria-label="Go to slide 3"></button>
+          <button class="hero-dot" data-dot aria-label="Go to slide 4"></button>
+        </div>
+
+        <!-- Slide counter -->
+        <div class="hero-counter" aria-hidden="true">
+          <span data-current>01</span><span class="sep">/</span><span data-total>04</span>
+        </div>
+      </section>
+
+      <!-- ============ CONTENT SECTIONS ============ -->
+
+      <!-- Client ticker -->
+      <section id="work" class="motion-section relative overflow-hidden py-10 border-y border-slate-2/20" data-motion-section>
         <div class="ticker-track text-slate-500 font-mono text-sm tracking-[0.25em]">
-          <span class="mx-10">HELIOS</span><span class="mx-10">·</span>
-          <span class="mx-10">VANTA CORE</span><span class="mx-10">·</span>
-          <span class="mx-10">NOVA GRID</span><span class="mx-10">·</span>
-          <span class="mx-10">AXIOM</span><span class="mx-10">·</span>
-          <span class="mx-10">QUANTUMLABS</span><span class="mx-10">·</span>
-          <span class="mx-10">STRATA</span><span class="mx-10">·</span>
-          <!-- duplicate for seamless loop -->
-          <span class="mx-10">HELIOS</span><span class="mx-10">·</span>
-          <span class="mx-10">VANTA CORE</span><span class="mx-10">·</span>
-          <span class="mx-10">NOVA GRID</span><span class="mx-10">·</span>
-          <span class="mx-10">AXIOM</span><span class="mx-10">·</span>
-          <span class="mx-10">QUANTUMLABS</span><span class="mx-10">·</span>
-          <span class="mx-10">STRATA</span><span class="mx-10">·</span>
+          <span class="mx-10">RETAIL CO</span><span class="mx-10">·</span>
+          <span class="mx-10">HORIZON F&amp;B</span><span class="mx-10">·</span>
+          <span class="mx-10">NOVA CLINIC</span><span class="mx-10">·</span>
+          <span class="mx-10">URBAN THREADS</span><span class="mx-10">·</span>
+          <span class="mx-10">BLUEPEAK</span><span class="mx-10">·</span>
+          <span class="mx-10">CRAFT &amp; CO</span><span class="mx-10">·</span>
+          <span class="mx-10">RETAIL CO</span><span class="mx-10">·</span>
+          <span class="mx-10">HORIZON F&amp;B</span><span class="mx-10">·</span>
+          <span class="mx-10">NOVA CLINIC</span><span class="mx-10">·</span>
+          <span class="mx-10">URBAN THREADS</span><span class="mx-10">·</span>
+          <span class="mx-10">BLUEPEAK</span><span class="mx-10">·</span>
+          <span class="mx-10">CRAFT &amp; CO</span><span class="mx-10">·</span>
+        </div>
+      </section>
+
+      <!-- Know Us Better -->
+      <section id="about" class="motion-section px-6 pt-24 pb-10 max-w-6xl mx-auto" data-motion-section>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-20">
+          <div data-reveal="left">
+            <p class="font-mono text-xs tracking-[0.3em] text-brand mb-5 flex items-center gap-3">
+              <span class="inline-block w-8 h-px bg-brand"></span>KNOW US BETTER
+            </p>
+            <h2 class="font-display font-black text-4xl sm:text-5xl leading-[1.05] gradient-text">
+              We help to create strategies, design &amp; development.
+            </h2>
+          </div>
+          <div class="lg:pt-10" data-reveal="right" data-reveal-delay="150">
+            <p class="text-slate-300/90 text-base sm:text-lg font-light leading-relaxed">
+              We never underestimate any part of the project as they're all essential to meeting the
+              ultimate goal. We find utmost satisfaction in powering your digital dreams. Let us take
+              your business ahead.
+            </p>
+            <a href="#contact" class="mt-6 inline-flex items-center gap-3 text-sm font-semibold text-slate-200 hover:text-white transition-colors">
+              <span class="inline-block w-8 h-px bg-brand"></span>KNOW MORE
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Expertise -->
+      <section id="expertise" class="wa-stack" aria-label="Our expertise">
+        <div class="wa-stack__scene">
+          <div class="text-center mb-[8vh]">
+            <p class="font-mono text-xs tracking-[0.3em] text-brand mb-4">// OUR EXPERTISE</p>
+            <h2 class="font-display font-bold text-4xl sm:text-5xl gradient-text">What We Do</h2>
+          </div>
+
+          <article class="wa-stack__card glass-card accent-frame">
+            <div class="wa-stack__logo" aria-hidden="true"><span class="font-display text-4xl font-bold text-brand">W</span></div>
+            <span class="wa-stack__num">01</span>
+            <h3>Graphic Design</h3>
+            <p>Brand systems and visual identities crafted to make you unmistakable.</p>
+          </article>
+
+          <article class="wa-stack__card glass-card accent-frame">
+            <div class="wa-stack__logo" aria-hidden="true"><span class="font-display text-4xl font-bold text-brand">U</span></div>
+            <span class="wa-stack__num">02</span>
+            <h3>User Experience</h3>
+            <p>Research-led interfaces that feel effortless and convert visitors.</p>
+          </article>
+
+          <article class="wa-stack__card glass-card accent-frame">
+            <div class="wa-stack__logo" aria-hidden="true"><span class="font-display text-4xl font-bold text-brand">P</span></div>
+            <span class="wa-stack__num">03</span>
+            <h3>Product Design</h3>
+            <p>End-to-end product thinking that ships polished, scalable experiences.</p>
+          </article>
         </div>
       </section>
 
       <!-- Pricing -->
-      <section id="pricing" class="px-6 py-28 max-w-6xl mx-auto">
+      <section id="pricing" class="motion-section px-6 py-24 max-w-6xl mx-auto" data-motion-section>
         <div class="text-center mb-16">
-          <p class="font-mono text-xs tracking-[0.3em] text-brand mb-4">// PRICING MATRIX</p>
-          <h2 class="font-display font-bold text-4xl sm:text-5xl gradient-text">
-            Scale Without Friction
-          </h2>
-          <p class="text-slate-400 mt-4 max-w-xl mx-auto">
-            Structural pricing that grows with your systems. No hidden compute fees.
-          </p>
+          <p class="font-mono text-xs tracking-[0.3em] text-brand mb-4">// ENGAGEMENTS</p>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl gradient-text">Plans That Scale With You</h2>
+          <p class="text-slate-400 mt-4 max-w-xl mx-auto">Transparent retainers built around your goals. No hidden fees, no fluff.</p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Tier -->
           <div class="glass-card rounded-2xl p-8">
-            <p class="font-mono text-xs tracking-widest text-slate-400">STARTER</p>
-            <p class="mt-4 text-4xl font-bold">
-              $0<span class="text-base font-normal text-slate-500">/mo</span>
-            </p>
+            <p class="font-mono text-xs tracking-widest text-slate-400">LAUNCH</p>
+            <p class="mt-4 text-4xl font-bold">$1.5k<span class="text-base font-normal text-slate-500">/mo</span></p>
             <div class="divider-glow my-6"></div>
             <ul class="space-y-3 text-sm text-slate-300">
-              <li>✦ 1 topographic scene</li>
-              <li>✦ Community fluid presets</li>
-              <li>✦ 720p export</li>
+              <li>✦ Website design &amp; build</li>
+              <li>✦ Brand starter kit</li>
+              <li>✦ Basic SEO setup</li>
             </ul>
-            <button
-              class="glass w-full mt-8 rounded-xl py-3 text-sm font-semibold hover:text-white transition-colors"
-            >
-              Start Free
-            </button>
+            <a href="#contact" class="glass w-full mt-8 rounded-xl py-3 text-sm font-semibold hover:text-white transition-colors grid place-items-center">Get Started</a>
           </div>
-
-          <!-- Featured -->
-          <div
-            class="glass-card accent-frame rounded-2xl p-8 relative scale-[1.03]"
-            style="background: linear-gradient(160deg, rgba(52, 87, 147, 0.22), rgba(15, 21, 38, 0.4))"
-          >
-            <span
-              class="absolute -top-3 left-1/2 -translate-x-1/2 cta text-[10px] font-bold tracking-widest rounded-full px-3 py-1"
-            >
-              MOST POPULAR
-            </span>
-            <p class="font-mono text-xs tracking-widest text-slate-300">STUDIO</p>
-            <p class="mt-4 text-4xl font-bold">
-              $49<span class="text-base font-normal text-slate-500">/mo</span>
-            </p>
+          <div class="glass-card accent-frame rounded-2xl p-8 relative scale-[1.03]" style="background: linear-gradient(160deg, rgba(52, 87, 147, 0.24), rgba(15, 21, 38, 0.55))">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 cta text-[10px] font-bold tracking-widest rounded-full px-3 py-1">MOST POPULAR</span>
+            <p class="font-mono text-xs tracking-widest text-slate-300">GROWTH</p>
+            <p class="mt-4 text-4xl font-bold">$4k<span class="text-base font-normal text-slate-500">/mo</span></p>
             <div class="divider-glow my-6"></div>
             <ul class="space-y-3 text-sm text-slate-200">
-              <li>✦ Unlimited scenes</li>
-              <li>✦ Full fluid dynamics engine</li>
-              <li>✦ 4K cinematic export</li>
-              <li>✦ Priority GPU rendering</li>
+              <li>✦ Everything in Launch</li>
+              <li>✦ Performance ad campaigns</li>
+              <li>✦ Social &amp; content strategy</li>
+              <li>✦ Monthly analytics reporting</li>
             </ul>
-            <button class="cta w-full mt-8 rounded-xl py-3 text-sm font-semibold text-white">
-              Go Studio
-            </button>
+            <a href="#contact" class="cta w-full mt-8 rounded-xl py-3 text-sm font-semibold text-white grid place-items-center">Scale Up</a>
           </div>
-
-          <!-- Enterprise -->
           <div class="glass-card rounded-2xl p-8">
             <p class="font-mono text-xs tracking-widest text-slate-400">ENTERPRISE</p>
             <p class="mt-4 text-4xl font-bold">Custom</p>
             <div class="divider-glow my-6"></div>
             <ul class="space-y-3 text-sm text-slate-300">
-              <li>✦ Dedicated render cluster</li>
-              <li>✦ SSO + audit logging</li>
-              <li>✦ On-prem deployment</li>
-              <li>✦ 24/7 SLA support</li>
+              <li>✦ Dedicated growth team</li>
+              <li>✦ Full-funnel strategy</li>
+              <li>✦ Priority creative pipeline</li>
+              <li>✦ Quarterly business reviews</li>
             </ul>
-            <button
-              class="glass w-full mt-8 rounded-xl py-3 text-sm font-semibold hover:text-white transition-colors"
-            >
-              Contact Sales
-            </button>
+            <a href="#contact" class="glass w-full mt-8 rounded-xl py-3 text-sm font-semibold hover:text-white transition-colors grid place-items-center">Contact Sales</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section id="contact" class="motion-section px-6 py-24" data-motion-section>
+        <div class="glass-card accent-frame rounded-3xl max-w-4xl mx-auto p-10 sm:p-16 text-center">
+          <h2 class="font-display font-bold text-3xl sm:text-5xl gradient-text">Let's talk about your next project</h2>
+          <p class="text-slate-400 mt-4 max-w-xl mx-auto">Take your business to the next level. Tell us your vision — we'll bring the blueprint and the creative firepower.</p>
+          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="mailto:hello@webartista.co" class="cta rounded-xl px-7 py-3.5 text-sm font-semibold text-white">Contact Us Today</a>
+            <a href="#about" class="glass rounded-xl px-7 py-3.5 text-sm font-semibold text-slate-200 hover:text-white transition-colors">Know Us Better</a>
           </div>
         </div>
       </section>
@@ -294,44 +257,14 @@
       <!-- Footer -->
       <footer class="px-6 py-14 border-t border-slate-2/20">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <!-- Brand logo (WEBARTISTA) — embedded inline SVG -->
           <a href="#product" aria-label="WEBARTISTA home" class="flex items-center h-6">
-            <svg
-              class="brand-logo"
-              viewBox="0 0 216 34"
-              role="img"
-              aria-label="WEBARTISTA"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <text
-                x="0"
-                y="26"
-                font-family="'Space Grotesk','Segoe UI',Arial,sans-serif"
-                font-weight="700"
-                font-size="26"
-                letter-spacing="0.5"
-              >
-                <tspan fill="#22C3D6">WEB</tspan><tspan fill="#FFFFFF">ARTISTA</tspan>
-              </text>
-              <g
-                stroke="#22C3D6"
-                stroke-width="4.2"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M187 8 L195 17 L187 26" />
-                <path d="M197 8 L205 17 L197 26" />
-              </g>
-            </svg>
+            <img src="/src/assets/logo.svg" alt="WEBARTISTA" class="brand-logo" />
           </a>
-          <p class="text-slate-500 text-xs font-mono">
-            © 2026 WEBARTISTA · ENGINEERED IN THE DARK
-          </p>
+          <p class="text-slate-500 text-xs font-mono">© 2026 WEBARTISTA · ENGINEERED IN THE DARK</p>
           <div class="flex gap-6 text-slate-400 text-sm">
-            <a href="#" class="hover:text-white transition-colors">Docs</a>
-            <a href="#" class="hover:text-white transition-colors">GitHub</a>
-            <a href="#" class="hover:text-white transition-colors">Discord</a>
+            <a href="#" class="hover:text-white transition-colors">Instagram</a>
+            <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+            <a href="#" class="hover:text-white transition-colors">Dribbble</a>
           </div>
         </div>
       </footer>

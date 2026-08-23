@@ -1,6 +1,5 @@
 /* =====================================================================
-   WEBARTISTA · ESLint flat config (ESLint v9+)
-   Baseline rules for browser ES modules. Extend as the project grows.
+   DGmarket · ESLint flat config (ESLint v9+)
    ===================================================================== */
 export default [
   {
@@ -13,6 +12,10 @@ export default [
         document: 'readonly',
         performance: 'readonly',
         requestAnimationFrame: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
         console: 'readonly',
         navigator: 'readonly',
       },

@@ -1,8 +1,8 @@
 {
-  "name": "webartista",
+  "name": "dgmarket",
   "private": true,
   "version": "1.0.0",
-  "description": "WEBARTISTA — cinematic landing page (Three.js topography + WebGL fluid dynamics).",
+  "description": "DGmarket — Web Design Studio. Cinematic landing page (Three.js topography + WebGL fluid + slide hero).",
   "type": "module",
   "scripts": {
     "dev": "vite",

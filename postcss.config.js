@@ -1,7 +1,6 @@
 /* =====================================================================
-   WEBARTISTA · PostCSS configuration
-   Runs Tailwind (compilation + purge) then Autoprefixer for vendor
-   prefixes. Invoked automatically by Vite during dev and build.
+   DGmarket · PostCSS configuration
+   Tailwind (compile + purge) then Autoprefixer. Run by Vite.
    ===================================================================== */
 export default {
   plugins: {
